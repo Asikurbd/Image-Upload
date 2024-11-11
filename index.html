@@ -48,12 +48,12 @@ hr {margin-top:1px;margin-bottom:1px;border:1px dotted #a5a6a8;
       (async () => {
         const response = await fetch('https://api.github.com/repos/asikurbd/Image-Upload/contents/');
         const data = await response.json();      
-        let htmlString = ' <div class="div"><center> Image Upload </center></div><ul class="a">';        
+        let htmlString = ' <div class="div"><center> Image Upload </center></div>';        
         for (let file of data) {
-          htmlString += `<hr> <li><a href="${file.path}">${file.name}</a></li>`;
+          htmlString += `<hr> &#x2022; <a href="${file.path}">${file.name}</a>`;
         }
 
-        htmlString += '</ul><center><b> Maximum Upload Size Limit 25 MB</b></center>';	      
+        htmlString += '<center><b> Maximum Upload Size Limit 25 MB</b></center>';	      
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
       })()
     </script>

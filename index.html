@@ -33,6 +33,11 @@ ul.a {
 }	
 
 .div {border-radius:4px;padding: 8px; font-weight: bold; background-color:#047448;font-size: 20px;color:#fff; }
+
+hr {margin-top:1px;margin-bottom:1px;border:1px dotted #a5a6a8;
+  
+  }
+	
   </style>	
 </head>
 
@@ -43,12 +48,12 @@ ul.a {
       (async () => {
         const response = await fetch('https://api.github.com/repos/asikurbd/Image-Upload/contents/');
         const data = await response.json();      
-        let htmlString = ' <div class="div"><center> Image Upload </center></div> <ul class="a">';        
+        let htmlString = ' <div class="div"><center> Image Upload </center></div><hr> <ul class="a">';        
         for (let file of data) {
           htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
         }
 
-        htmlString += '</ul> <center><b> Maximum Upload Size Limit 25 MB</b></center>';	      
+        htmlString += '</ul> <hr><center><b> Maximum Upload Size Limit 25 MB</b></center>';	      
         document.getElementsByTagName('body')[0].innerHTML = htmlString;
       })()
     </script>

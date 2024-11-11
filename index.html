@@ -41,8 +41,7 @@ ul.a {
       (async () => {
         const response = await fetch('https://api.github.com/repos/asikurbd/Image-Upload/contents/');
         const data = await response.json();      
-        let htmlString = ' <div style="border-radius:4px;padding: 4px; font-weight: bold; background-color:#b4eaf0;">
-		<center> Image Upload </center></div> <ul class="a">';        
+        let htmlString = ' <div style="border-radius:4px;padding: 4px; font-weight: bold; background-color:#b4eaf0;"><center> Image Upload </center></div> <ul class="a">';        
         for (let file of data) {
           htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
         }

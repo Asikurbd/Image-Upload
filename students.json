@@ -8,24 +8,29 @@
     "timestamp": "2025-08-28T07:30:42.612Z"
   },
   {
-    "name": "MD. RAKIBUL ISLAM",
     "id": "58",
+    "name": "MD. RAKIBUL ISLAM",
+    "class": "5",
+    "section": "B",
     "email": "ssc.Ibrahim@gmail.com",
-    "course": "Business Administration",
-    "year": "2",
-    "timestamp": "2025-08-28T07:37:09.379Z"
+    "dob": "2025-08-01",
+    "mobile": "uyuyuyuy",
+    "fatherName": "undefined",
+    "motherName": "fdfdfdfdf",
+    "address": "undefined",
+    "timestamp": "2025-08-28T07:57:00.892Z"
   },
   {
     "id": "4454",
-    "name": "সঞ্চয়পত্র এর সকল PDF File",
+    "name": "à¦¸à¦à§à¦à§à¦ªà¦¤à§à¦° à¦à¦° à¦¸à¦à¦² PDF File",
     "class": "4",
     "section": "A",
     "email": "dsd@gmail.com",
     "dob": "2025-08-01",
     "mobile": "01558342194",
-    "fatherName": "আব্দুর রহমান",
-    "motherName": "আমেনা বেগম",
-    "address": "হুগিড়া",
+    "fatherName": "à¦à¦¬à§à¦¦à§à¦° à¦°à¦¹à¦®à¦¾à¦¨",
+    "motherName": "à¦à¦®à§à¦¨à¦¾ à¦¬à§à¦à¦®",
+    "address": "à¦¹à§à¦à¦¿à§à¦¾",
     "timestamp": "2025-08-28T07:53:27.023Z"
   }
 ]

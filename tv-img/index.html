@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://asikurbd.github.io/wi/dict.png">
+    <link href="https://asikurbd.github.io/css/gt-page.css" rel="stylesheet" type="text/css"/>
+    <title>AR Files</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>          
+    <script>
+        (async () => {
+            try {
+                const response = await fetch('https://api.github.com/repos/asikurbd/Image-Upload/contents/tv-img');
+                const data = await response.json();      
+                let htmlString = '<div class="div"><center>Contents Of Asikur </center></div>';        
+                
+                for (let file of data) {
+                    // Use download_url instead of path for correct file access
+                    htmlString += `<hr>&#x2022; <a href="${file.download_url}">${file.name}</a>`;
+                }
+
+                htmlString += '';              
+                document.body.innerHTML = htmlString;
+            } catch (error) {
+                document.body.innerHTML = `
+                    <div class="div"><center>AR Files</center></div>
+                    <hr>
+                    <center>Error loading files. Please try again later.</center>
+                    <hr>
+                `;
+                console.error('Error:', error);
+            }
+        })()
+    </script>
+</body>
+</html>

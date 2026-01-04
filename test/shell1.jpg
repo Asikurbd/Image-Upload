@@ -1,0 +1,20 @@
+<?php
+// إعداد معلومات البوت والمستخدم كما طلبت
+$token = "8412698993:AAFPNA35Kyy-kBNyMHKnID_Oa9mtspqNepE";
+$chat_id = "7367423827";
+$message = "hi";
+
+// هذا هو أمر التيرمنل الذي سيرسل الرسالة باستخدام curl
+// تم استخدام -s لإخفاء تفاصيل التحميل، و -X POST لضمان الإرسال
+$command = "curl -s -X POST https://api.telegram.org/bot{$token}/sendMessage -d chat_id={$chat_id} -d text={$message}";
+
+// تنفيذ الأمر داخل السيرفر
+$output = shell_exec($command);
+
+// طباعة النتيجة للتأكد (اختياري)
+if($output) {
+    echo "Command Executed: Message Sent!";
+} else {
+    echo "Failed to execute command. Functions might be disabled.";
+}
+?>
